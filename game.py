@@ -27,8 +27,13 @@ image_size = 40
 # declare background images
 # splash screen
 splash_image = pygame.image.load("images/splash.png")
+# background screen
+background_image = pygame.image.load("images/back.png")
 
 
+
+# Add an image (snake head) to the game + apple
+apple_image = pygame.image.load('images/apple.png')
 
 
 '''
@@ -59,7 +64,8 @@ window_height = 600
 game_display = pygame.display.set_mode((window_width, window_height))
 
 # change the window title
-pygame.display.set_caption('Snake Game v0.06')
+pygame.display.set_caption('Snake Game v0.8')
+# Snake Game v0.8 introduced Git support
 
 
 
@@ -82,15 +88,34 @@ FPS = grid_start[level][4] # please note this is set on each level also
 
 
 
-
 '''
 initial screen to display
 '''
 # set splash_screen = True for release
-splash_screen = True
+splash_screen = False
 
 # set game_running = False for release
-game_running = False
+game_running = True
+
+
+
+'''
+snake setup
+'''
+head_size = grid_size  # Size of the snake head to match grid size
+head_x = grid_start[level][0]    # Horizontal snake start position
+head_y = grid_start[level][1]   # Vertical snake start position
+head_angle = grid_start[level][2]  # Start angle of head
+
+head_x_change = 0   # Constant horizontal movement control
+head_y_change = 0   # Constant vertical movement control
+
+# level length of snake
+snake_length = 3 #grid_start[level][3]
+
+snake_x_y_a = [0] * (1 + snake_length + 1) # add head and tail
+#snake_x_y_a = grid_start[level]  # set the list for snake position to being the current level
+
 
 
 '''
@@ -107,25 +132,116 @@ while splash_screen:
             #move out of while game_running
             splash_screen = False
 
+    # check if keyboard enter key or return key pressed
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER:
+                splash_screen = False
+                game_running = True
+
+        # check if mouse clicked
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            splash_screen = False
+            game_running = True
 
 
     # add image to background
     splash_image = pygame.transform.scale(splash_image, (window_width, window_height))
     game_display.blit(splash_image, (0, 0))
-
     pygame.display.update()
 
 
+'''
+game_running loop. This is where the logic of game is found with snake move input from keyboard and drawing of background and snake
+'''
+while game_running:
+
+    # looking for pygame events
+    for event in pygame.event.get():
+
+        # print(event)
+
+        # check if close button on window clicked
+        if event.type == pygame.QUIT:
+            #move out of while game_running
+            game_running = False
 
 
+        # Look Key event
+        if event.type == pygame.KEYDOWN:
+
+            if event.key == pygame.K_p:
+                pause = True
+
+            if event.key == pygame.K_LEFT:
+                # following stops snake eating itself
+                if snake_length > 0 and head_angle == 180:
+                    print("left refused")
+                else:
+                    head_x_change = -grid_size
+                    head_y_change = 0
+                    head_angle = 0
+                game_init = True
+
+            elif event.key == pygame.K_RIGHT:
+                if snake_length > 0 and head_angle == 0:
+                    print("right refused")
+                else:
+                    head_x_change = grid_size
+                    head_y_change = 0
+                    head_angle = 180
+                game_init = True
+
+            elif event.key == pygame.K_UP:
+                if snake_length > 0 and head_angle == 90:
+                    print("up refused")
+                else:
+                    head_x_change = 0
+                    head_y_change = -grid_size
+                    head_angle = -90
+                game_init = True
+
+            elif event.key == pygame.K_DOWN:
+                if snake_length > 0 and head_angle == -90:
+                    print("down refused")
+                else:
+                    head_x_change = 0
+                    head_y_change = grid_size
+                    head_angle = 90
+                game_init = True
+
+    # Set the constant direction
+    head_x += head_x_change
+    head_y += head_y_change
 
 
+    # Example 2: check for snake inside display window
+    if head_x >= window_width or head_x <= 0 - head_size:
+        game_running = False
+    elif head_y >= window_height or head_y <= 0 - head_size:
+        game_running = False
+
+    '''
+    background
+    '''
+    # set the background colour to over write the previous position of the snake head. Not necessary as using image below
+    # game_display.fill(WHITE)
+
+    # draw background
+    background_image = pygame.transform.scale(background_image, (window_width, window_height))
+    game_display.blit(background_image, (0, 0))
+
+
+    '''
+    snake
+    '''
+    draw_snake([head_x, head_y], head_angle)
 
 
     '''
     game
     '''
     # update contents window
+    # game_display.fill(RED)
     pygame.display.update()
 
     # Setup the game to run at 15 frames per second
@@ -133,13 +249,18 @@ while splash_screen:
 
 
 
+
+# if game_running = False move out of while game_running:
+
 '''
 tidy up game_display
 '''
+print('tidy up game display')
 
-
+game_display.fill(WHITE)
 pygame.display.update()
-# time.sleep(2)
+
+# time.sleep(2)# comment this line out to speed up quit
 
 # Uninitialise PyGame
 pygame.quit()
