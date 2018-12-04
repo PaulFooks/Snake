@@ -30,7 +30,16 @@ splash_image = pygame.image.load("images/splash.png")
 # background screen
 background_image = pygame.image.load("images/back.png")
 
+# declare snake images
+head_image = pygame.image.load("images/head.png")
+body_image = pygame.image.load("images/body.png")
+body_image_01 = pygame.image.load("images/body_bend_01.png")
+body_image_02 = pygame.image.load("images/body_bend_02.png")
+body_short = pygame.image.load("images/body_short.png")
 
+twist_image = pygame.image.load("images/twist.png")
+tail_image = pygame.image.load("images/tail.png")
+short_tail_image = pygame.image.load("images/short_tail.png")
 
 # Add an image (snake head) to the game + apple
 apple_image = pygame.image.load('images/apple.png')
@@ -96,7 +105,8 @@ splash_screen = False
 
 # set game_running = False for release
 game_running = True
-
+# used in setup of snake
+game_init = False
 
 
 '''
@@ -148,6 +158,84 @@ while splash_screen:
     splash_image = pygame.transform.scale(splash_image, (window_width, window_height))
     game_display.blit(splash_image, (0, 0))
     pygame.display.update()
+
+
+
+
+
+'''
+snake
+'''
+# calculate body part
+def body_calc(i, x, y, angle, image):
+
+    new_image_pos = i * image_size
+
+    #if x%image_size == grid_size or y%image_size == grid_size:
+        #if i >= 2:
+            #new_image_pos = (i * image_size) - image_size/2
+        #elif i > 2:
+            #new_image_pos = (i * image_size) - image_size/2
+
+    if angle == 0:
+        calc = [x + new_image_pos,y , angle, image]
+    elif angle == 90:
+        calc = [x,y - new_image_pos, angle, image]
+    elif angle == -90:
+        calc = [x,y + new_image_pos,angle, image]
+    elif angle == 180:
+        calc = [x - new_image_pos,y ,angle, image]
+    return calc
+
+
+# draw snake
+def draw_snake(x_y, angle):
+
+    if snake_x_y_a[2] == 0:
+        print("start")
+
+        snake_x_y_a[0] = body_calc(0, x_y[0], x_y[1], angle, head_image) # head
+
+        for i in range(1, snake_length + 1):
+            if i%2 == 0:
+                body_part = body_image_01
+            else:
+                body_part = body_image_02
+            snake_x_y_a[i] = body_calc(i, x_y[0], x_y[1], angle, body_part) # body
+
+        snake_x_y_a[snake_length + 1] = body_calc(snake_length + 1, x_y[0], x_y[1], angle, tail_image) # tail
+
+        print(snake_x_y_a)
+
+    elif game_init:
+
+
+
+        pass
+
+    # draw the snake from contents of array
+    for idx, x_y_a in enumerate(snake_x_y_a):
+
+
+        if idx == 0:
+            image_rotation = pygame.transform.rotate(x_y_a[3], angle)
+            game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+
+        #if x_y_a[0]%40 == 20 or x_y_a[1]%40 == 20:
+        if idx == 1:
+            image_rotation = pygame.transform.rotate(x_y_a[3], angle)
+            game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+
+
+        elif idx > 1 and idx < len(snake_x_y_a):
+
+            if snake_x_y_a[idx][2] != snake_x_y_a[idx][2]:
+                image_rotation = pygame.transform.rotate(twist_image, x_y_a[2])
+                game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+            else:
+                image_rotation = pygame.transform.rotate(x_y_a[3], x_y_a[2])
+                game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+
 
 
 '''
@@ -255,7 +343,7 @@ while game_running:
 '''
 tidy up game_display
 '''
-print('tidy up game display')
+print('tidy up game display and quit/credits sequence')
 
 game_display.fill(WHITE)
 pygame.display.update()

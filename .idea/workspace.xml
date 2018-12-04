@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc6543af-6433-47c3-b667-9e27ee477799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/apple.png" afterDir="false" />
+    <list default="true" id="fc6543af-6433-47c3-b667-9e27ee477799" name="Default Changelist" comment="Set up complete of game_loop and splash_loop. Draw snake. Draw apple.">
+      <change afterPath="$PROJECT_DIR$/images/body.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/body_bend_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/body_bend_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/body_short.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/short_tail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/twist.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +27,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="488">
-                    <caret line="484" column="7" lean-forward="true" selection-start-line="482" selection-start-column="4" selection-end-line="484" selection-end-column="7" />
+                  <state relative-caret-position="389">
+                    <caret line="267" column="26" lean-forward="true" selection-start-line="258" selection-start-column="8" selection-end-line="267" selection-end-column="26" />
                     <folding>
                       <element signature="e#117#138#0" expanded="true" />
                     </folding>
@@ -58,14 +64,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="11" />
-          <entry key="py" value="413" />
-          <entry key="txt" value="132" />
+          <entry key="py" value="633" />
+          <entry key="txt" value="208" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="143" />
-          <entry key="Python" value="413" />
+          <entry key="PLAIN_TEXT" value="219" />
+          <entry key="Python" value="633" />
         </counts>
       </usages-collector>
     </session>
@@ -75,10 +81,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+            <state relative-caret-position="441">
+              <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
               <folding>
                 <element signature="e#117#138#0" expanded="true" />
+                <marker date="1543950144290" expanded="true" signature="4548:6011" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,13 +107,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/../Snake_old/game.py" />
         <option value="$PROJECT_DIR$/game.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="125" />
-    <option name="y" value="160" />
+    <option name="x" value="458" />
+    <option name="y" value="189" />
     <option name="width" value="1680" />
     <option name="height" value="1000" />
   </component>
@@ -188,7 +196,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="231" y="163" width="1680" height="1000" extended-state="0" />
+    <frame x="458" y="189" width="1680" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
@@ -213,7 +221,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Import and setup of game_display." />
     <MESSAGE value="Folders for images and udio creates. Splash loop created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Folders for images and udio creates. Splash loop created." />
+    <MESSAGE value="Set up complete of game_loop and splash_loop. Draw snake. Draw apple." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up complete of game_loop and splash_loop. Draw snake. Draw apple." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -225,8 +234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="484" column="7" lean-forward="true" selection-start-line="482" selection-start-column="4" selection-end-line="484" selection-end-column="7" />
+        <state relative-caret-position="389">
+          <caret line="267" column="26" lean-forward="true" selection-start-line="258" selection-start-column="8" selection-end-line="267" selection-end-column="26" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
           </folding>
@@ -235,10 +244,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+        <state relative-caret-position="441">
+          <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
+            <marker date="1543950144290" expanded="true" signature="4548:6011" ph="..." />
           </folding>
         </state>
       </provider>
