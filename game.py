@@ -22,7 +22,7 @@ GREEN = (0,200,0)
 images setup
 '''
 # image size
-image_size = 40
+image_size = 10
 
 # declare background images
 # splash screen
@@ -60,7 +60,7 @@ pygame.mixer.music.load("audio/music.mp3")
 game setup
 '''
 # size of grid for snake movement
-grid_size = 20
+grid_size = 40
 
 # declare clock as pygame object
 clock = pygame.time.Clock()
@@ -234,14 +234,13 @@ def draw_snake(x_y, angle):
         # snake_x_y_a.pop()
 
         # snake_x_y_a
-        print(snake_x_y_a)
+        #print(snake_x_y_a)
 
 
 
 
     # draw the snake from contents of snake_x_y_a array
     for idx, x_y_a in enumerate(snake_x_y_a):
-
 
         if idx == 0:
 
@@ -260,14 +259,15 @@ def draw_snake(x_y, angle):
             else:
                 body_part = body_image_02
 
-            image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
-            game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+            #image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
+            #game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
 
             for i in range(1, len(snake_x_y_a) -1):
 
                 if snake_x_y_a[i][2] != snake_x_y_a[i+1][2]:
-                    image_rotation = pygame.transform.rotate(twist_image, snake_x_y_a[i][2])
-                    game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+                    #image_rotation = pygame.transform.rotate(twist_image, snake_x_y_a[i][2])
+                    #game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+                    print(snake_x_y_a[i][2])
                 else:
                     image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
                     game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
