@@ -34,14 +34,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="11" />
-          <entry key="py" value="1804" />
-          <entry key="txt" value="339" />
+          <entry key="py" value="2496" />
+          <entry key="txt" value="384" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="350" />
-          <entry key="Python" value="1804" />
+          <entry key="PLAIN_TEXT" value="395" />
+          <entry key="Python" value="2496" />
         </counts>
       </usages-collector>
     </session>
@@ -51,11 +51,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+            <state relative-caret-position="144">
+              <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
               <folding>
                 <element signature="e#117#138#0" expanded="true" />
-                <marker date="1544028211720" expanded="true" signature="4554:7845" ph="..." />
+                <marker date="1544046217931" expanded="true" signature="4554:9140" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,8 +83,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="23" />
+    <option name="x" value="364" />
+    <option name="y" value="130" />
     <option name="width" value="1680" />
     <option name="height" value="1000" />
   </component>
@@ -166,7 +166,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="23" width="1680" height="1000" extended-state="0" />
+    <frame x="364" y="130" width="1680" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
@@ -196,7 +196,8 @@
     <MESSAGE value="Snake update position. Issues with twist of body part." />
     <MESSAGE value="Set grid_size to 10" />
     <MESSAGE value="Turn body part issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Turn body part issues" />
+    <MESSAGE value="Simplify with image and grid size set at 40px" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplify with image and grid size set at 40px" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -218,11 +219,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        <state relative-caret-position="144">
+          <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
-            <marker date="1544028211720" expanded="true" signature="4554:7845" ph="..." />
+            <marker date="1544046217931" expanded="true" signature="4554:9140" ph="..." />
           </folding>
         </state>
       </provider>

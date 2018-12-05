@@ -88,7 +88,7 @@ levels set
 
 # starting position of snake [0,1], angle of snake[2], initial length of snake[3], FPS of game[4] max length of snake[5] all set in level
 grid_start =\
-            [[100, 100, -90, 0, 2, 10],[100, 100, 0, 1, 15, 10]]
+            [[100, 100, -90, 0, 8, 10],[100, 100, 0, 1, 15, 10]]
 
 # set starting level = 0
 level = 0
@@ -240,7 +240,7 @@ def draw_snake(x_y, angle):
 
         if idx == 0:
 
-            image_rotation = pygame.transform.rotate(head_image, angle)
+            image_rotation = pygame.transform.rotate(x_y_a[3], angle)
             game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
 
         #elif idx == 1:
@@ -255,7 +255,30 @@ def draw_snake(x_y, angle):
             else:
                 body_part = body_image_02
 
-            image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
+            if snake_x_y_a[idx - 1][2] == x_y_a[2]:
+                image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
+            else:
+
+                # set corner piece
+                if x_y_a[2] == -90 and snake_x_y_a[idx - 1][2] == 180:
+                    calc = 0
+                elif x_y_a[2] == 180 and snake_x_y_a[idx - 1][2] == 90:
+                    calc = -90
+                elif x_y_a[2] == 90 and snake_x_y_a[idx - 1][2] == 0:
+                    calc = -180
+                elif x_y_a[2] == 0 and snake_x_y_a[idx - 1][2] == -90:
+                    calc = 90
+                elif x_y_a[2] == 90 and snake_x_y_a[idx - 1][2] == 180:
+                    calc = 90
+                elif x_y_a[2] == 180 and snake_x_y_a[idx - 1][2] == -90:
+                    calc = -180
+                elif x_y_a[2] == -90 and snake_x_y_a[idx - 1][2] == 0:
+                    calc = -90
+                elif x_y_a[2] == 0 and snake_x_y_a[idx - 1][2] == 90:
+                    calc = 0
+
+                image_rotation = pygame.transform.rotate(twist_image, calc)
+
             game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
 
             '''
@@ -271,8 +294,15 @@ def draw_snake(x_y, angle):
             '''
         elif idx == len(snake_x_y_a) -1:
 
-            image_rotation = pygame.transform.rotate(tail_image, x_y_a[2])
+            if snake_x_y_a[idx - 1][2] == x_y_a[2]:
+                # rotate to same value
+                image_rotation = pygame.transform.rotate(tail_image, x_y_a[2])
+            else:
+                # rotate to previous piece body piece
+                image_rotation = pygame.transform.rotate(tail_image, snake_x_y_a[idx - 1][2])
+            # set the tail piece
             game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+
 
 
         #if x_y_a[0]%40 == 20 or x_y_a[1]%40 == 20:
