@@ -87,7 +87,7 @@ levels set
 
 # starting position of snake [0,1], angle of snake[2], initial length of snake[3], FPS of game[4] max length of snake[5] all set in level
 grid_start =\
-            [[100, 100, -90, 0, 5, 10],[100, 100, 0, 1, 15, 10]]
+            [[100, 100, -90, 0, 2, 10],[100, 100, 0, 1, 15, 10]]
 
 # set starting level = 0
 level = 0
@@ -204,7 +204,7 @@ def draw_snake(x_y, angle):
         print(snake_x_y_a)
 
     elif game_init:
-        print("")
+        #print("")
 
         #if x_y[0]%image_size == grid_size or x_y[1]%image_size == grid_size:
             #print('hit')
@@ -222,7 +222,9 @@ def draw_snake(x_y, angle):
 
             for i in range(1, snake_length + 1):
                 if snake_x_y_a[i][2] != snake_x_y_a[i + 1][2]:
-                    print("angle")
+                    #print("angle")
+                    pass
+
             # remove end of array
             snake_x_y_a.pop()
 
@@ -263,11 +265,11 @@ def draw_snake(x_y, angle):
             #game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
 
             for i in range(1, len(snake_x_y_a) -1):
-
-                if snake_x_y_a[i][2] != snake_x_y_a[i+1][2]:
-                    #image_rotation = pygame.transform.rotate(twist_image, snake_x_y_a[i][2])
-                    #game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
-                    print(snake_x_y_a[i][2])
+                #print(snake_x_y_a[i][2])
+                if snake_x_y_a[i][2] != snake_x_y_a[i + 1][2]:
+                    image_rotation = pygame.transform.rotate(twist_image, snake_x_y_a[i][2]  + 90)
+                    game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
+                    print(idx)
                 else:
                     image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
                     game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
