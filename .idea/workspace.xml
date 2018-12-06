@@ -34,14 +34,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="11" />
-          <entry key="py" value="3314" />
-          <entry key="txt" value="419" />
+          <entry key="py" value="4087" />
+          <entry key="txt" value="462" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="430" />
-          <entry key="Python" value="3314" />
+          <entry key="PLAIN_TEXT" value="473" />
+          <entry key="Python" value="4087" />
         </counts>
       </usages-collector>
     </session>
@@ -51,11 +51,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+            <state relative-caret-position="104">
+              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
               <folding>
                 <element signature="e#117#138#0" expanded="true" />
-                <marker date="1544054931956" expanded="true" signature="4408:7738" ph="..." />
+                <marker date="1544130098843" expanded="true" signature="4412:7887" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,10 +95,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="29" />
-    <option name="y" value="46" />
-    <option name="width" value="1680" />
-    <option name="height" value="1000" />
+    <option name="x" value="133" />
+    <option name="y" value="194" />
+    <option name="width" value="1748" />
+    <option name="height" value="1231" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -178,16 +178,16 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="46" width="1680" height="1000" extended-state="0" />
+    <frame x="133" y="194" width="1748" height="1231" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23972206" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32929516" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.262511" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -210,7 +210,8 @@
     <MESSAGE value="Turn body part issues" />
     <MESSAGE value="Simplify with image and grid size set at 40px" />
     <MESSAGE value="Corner pieces working and full code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corner pieces working and full code" />
+    <MESSAGE value="Add apple and collision. Work on snake grow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add apple and collision. Work on snake grow" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -232,11 +233,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+        <state relative-caret-position="104">
+          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
-            <marker date="1544054931956" expanded="true" signature="4408:7738" ph="..." />
+            <marker date="1544130098843" expanded="true" signature="4412:7887" ph="..." />
           </folding>
         </state>
       </provider>

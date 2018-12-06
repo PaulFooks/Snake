@@ -63,14 +63,14 @@ game setup
 # size of grid for snake movement
 grid_size = 40
 counter = 0
-pause = False
+paused = False
 
 # declare clock as pygame object
 clock = pygame.time.Clock()
 
 # declare the window dimensions
-window_width = 800
-window_height = 600
+window_width = 1200
+window_height = 800
 
 # create a game_display variable and add the pygame window to it
 game_display = pygame.display.set_mode((window_width, window_height))
@@ -90,7 +90,7 @@ levels set
 
 # starting position of snake [0,1], angle of snake[2], initial length of snake[3], FPS of game[4] max length of snake[5] all set in level
 grid_start =\
-            [[120, 120, -90, 1, 2, 10],[100, 100, 0, 1, 15, 10]]
+            [[120, 120, -90, 20, 6, 20],[100, 100, 0, 1, 15, 10]]
 
 # set starting level = 0
 level = 0
@@ -192,7 +192,7 @@ def draw_snake(x_y, angle):
     global counter
 
     if snake_x_y_a[2] == 0:
-        print("start")
+        print("start", snake_x_y_a)
 
         snake_x_y_a[0] = body_calc(0, x_y[0], x_y[1], angle, head_image) # head
 
@@ -203,6 +203,7 @@ def draw_snake(x_y, angle):
 
     elif game_init:
 
+        # insert t 0 index
         snake_x_y_a.insert(0, body_calc(0, x_y[0], x_y[1], angle, head_image)) # head
 
         # remove from end of array
@@ -255,13 +256,14 @@ def draw_snake(x_y, angle):
                     calc = -90
                 elif x_y_a[2] == 0 and snake_x_y_a[idx - 1][2] == 90:
                     calc = 0
+                elif x_y_a[2] == 0 and snake_x_y_a[idx - 1][2] == 180:
+                    calc = 180
 
                 image_rotation = pygame.transform.rotate(twist_image, calc)
 
             game_display.blit(image_rotation, [x_y_a[0], x_y_a[1]])
 
         elif idx == len(snake_x_y_a) -1:
-
             if snake_x_y_a[idx - 1][2] == x_y_a[2]:
                 # rotate to same value
                 image_rotation = pygame.transform.rotate(tail_image, x_y_a[2])
@@ -274,6 +276,11 @@ def draw_snake(x_y, angle):
 '''
 end snake
 '''
+
+
+
+
+
 
 '''
 apple
@@ -299,6 +306,8 @@ end apple
 
 
 
+
+
 '''
 game_running loop. This is where the logic of game is found with snake move input from keyboard and drawing of background and snake
 '''
@@ -319,10 +328,12 @@ while game_running:
         if event.type == pygame.KEYDOWN:
 
             if event.key == pygame.K_p:
-                pause = not pause
-                print(pause)
+                paused = not paused
+                game_init = not game_init
+                print(paused)
 
-            if event.key == pygame.K_LEFT:
+
+            if event.key == pygame.K_LEFT and paused == False:
                 # following stops snake eating itself
                 if snake_length > 0 and head_angle == 180:
                     print("left refused")
@@ -332,7 +343,7 @@ while game_running:
                     head_angle = 0
                 game_init = True
 
-            elif event.key == pygame.K_RIGHT:
+            elif event.key == pygame.K_RIGHT and paused == False:
                 if snake_length > 0 and head_angle == 0:
                     print("right refused")
                 else:
@@ -341,7 +352,7 @@ while game_running:
                     head_angle = 180
                 game_init = True
 
-            elif event.key == pygame.K_UP:
+            elif event.key == pygame.K_UP and paused == False:
                 if snake_length > 0 and head_angle == 90:
                     print("up refused")
                 else:
@@ -350,7 +361,7 @@ while game_running:
                     head_angle = -90
                 game_init = True
 
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_DOWN and paused == False:
                 if snake_length > 0 and head_angle == -90:
                     print("down refused")
                 else:
@@ -360,8 +371,11 @@ while game_running:
                 game_init = True
 
     # Set the constant direction
-    head_x += head_x_change
-    head_y += head_y_change
+    if not paused:
+        head_x += head_x_change
+        head_y += head_y_change
+    else:
+        game_init = False
 
 
     # Example 2: check for snake inside display window
@@ -386,22 +400,41 @@ while game_running:
     '''
     draw_snake([head_x, head_y], head_angle)
 
+
+
     '''
     apple
     '''
     game_display.blit(apple_image, (apple_position[0], apple_position[1]))
 
+
+
     '''
     check for collisions
     '''
     if head_x == apple_position[0] and head_y == apple_position[1]:
-        # add to snake length
-        snake_length += 1
+        # add to snake length by appending
+        snake_x_y_a.append(0)
+
         if snake_length == grid_start[level][5]:
-            game_running = False
+            # game_running = False
+            print("next level")
 
         # redraw the apple
         apple_position = draw_apple()
+
+    else:
+
+        # check for collision with snake
+        for idx, x_y_a in enumerate(snake_x_y_a):
+            # checks if idx > 0 which is the head
+            if idx > 0 and head_x == x_y_a[0] and head_y == x_y_a[1]:
+
+                paused = True
+                time.sleep(2)
+                paused = False
+                # game_running = False
+
 
     '''
     game
