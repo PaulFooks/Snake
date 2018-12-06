@@ -22,26 +22,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="3" />
-          <entry key="py" value="3" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="11" />
-          <entry key="py" value="2496" />
-          <entry key="txt" value="384" />
+          <entry key="py" value="3314" />
+          <entry key="txt" value="419" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="395" />
-          <entry key="Python" value="2496" />
+          <entry key="PLAIN_TEXT" value="430" />
+          <entry key="Python" value="3314" />
         </counts>
       </usages-collector>
     </session>
@@ -51,11 +51,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
+            <state relative-caret-position="326">
+              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
               <folding>
                 <element signature="e#117#138#0" expanded="true" />
-                <marker date="1544046217931" expanded="true" signature="4554:9140" ph="..." />
+                <marker date="1544054931956" expanded="true" signature="4408:7738" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="527" column="37" lean-forward="true" selection-start-line="517" selection-start-column="4" selection-end-line="527" selection-end-column="37" />
+              <folding>
+                <element signature="e#117#138#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +95,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="364" />
-    <option name="y" value="130" />
+    <option name="x" value="29" />
+    <option name="y" value="46" />
     <option name="width" value="1680" />
     <option name="height" value="1000" />
   </component>
@@ -166,7 +178,7 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="364" y="130" width="1680" height="1000" extended-state="0" />
+    <frame x="29" y="46" width="1680" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
@@ -197,7 +209,8 @@
     <MESSAGE value="Set grid_size to 10" />
     <MESSAGE value="Turn body part issues" />
     <MESSAGE value="Simplify with image and grid size set at 40px" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simplify with image and grid size set at 40px" />
+    <MESSAGE value="Corner pieces working and full code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corner pieces working and full code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -209,8 +222,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="262" column="41" lean-forward="true" selection-start-line="259" selection-start-column="12" selection-end-line="262" selection-end-column="41" />
+        <state relative-caret-position="231">
+          <caret line="527" column="37" lean-forward="true" selection-start-line="517" selection-start-column="4" selection-end-line="527" selection-end-column="37" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
           </folding>
@@ -219,11 +232,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
+        <state relative-caret-position="326">
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
-            <marker date="1544046217931" expanded="true" signature="4554:9140" ph="..." />
+            <marker date="1544054931956" expanded="true" signature="4408:7738" ph="..." />
           </folding>
         </state>
       </provider>
