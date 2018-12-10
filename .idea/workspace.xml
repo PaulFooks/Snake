@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc6543af-6433-47c3-b667-9e27ee477799" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
     </list>
@@ -15,57 +16,51 @@
     <session id="-1087653997">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="20191210" value="1" />
           <entry key="md" value="3" />
-          <entry key="py" value="4" />
+          <entry key="py" value="5" />
+          <entry key="ssss" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="4" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="md" value="11" />
-          <entry key="py" value="4087" />
-          <entry key="txt" value="462" />
+          <entry key="py" value="6278" />
+          <entry key="ssss" value="2" />
+          <entry key="txt" value="496" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="473" />
-          <entry key="Python" value="4087" />
+          <entry key="PLAIN_TEXT" value="509" />
+          <entry key="Python" value="6278" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
-              <folding>
-                <element signature="e#117#138#0" expanded="true" />
-                <marker date="1544130098843" expanded="true" signature="4412:7887" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="527" column="37" lean-forward="true" selection-start-line="517" selection-start-column="4" selection-end-line="527" selection-end-column="37" />
+            <state relative-caret-position="559">
+              <caret line="457" lean-forward="true" selection-start-line="457" selection-end-line="457" />
               <folding>
                 <element signature="e#117#138#0" expanded="true" />
               </folding>
@@ -90,15 +85,17 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../Snake_old/game.py" />
+        <option value="$PROJECT_DIR$/ssss" />
+        <option value="$PROJECT_DIR$/20191210" />
         <option value="$PROJECT_DIR$/game.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="133" />
-    <option name="y" value="194" />
-    <option name="width" value="1748" />
-    <option name="height" value="1231" />
+    <option name="x" value="225" />
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1378" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -113,11 +110,6 @@
               <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
               <item name="Snake" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Snake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Snake" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -125,8 +117,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -178,20 +170,19 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="133" y="194" width="1748" height="1231" extended-state="0" />
-    <editor active="true" />
+    <frame x="225" y="23" width="2560" height="1378" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23972206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08270973" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.262511" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289269" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -211,7 +202,8 @@
     <MESSAGE value="Simplify with image and grid size set at 40px" />
     <MESSAGE value="Corner pieces working and full code" />
     <MESSAGE value="Add apple and collision. Work on snake grow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add apple and collision. Work on snake grow" />
+    <MESSAGE value="Add pause and snake being added to" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pause and snake being added to" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -223,21 +215,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Snake_old/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="527" column="37" lean-forward="true" selection-start-line="517" selection-start-column="4" selection-end-line="527" selection-end-column="37" />
-          <folding>
-            <element signature="e#117#138#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="7860">
+          <caret line="527" column="37" selection-start-line="517" selection-start-column="4" selection-end-line="527" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="509" lean-forward="true" selection-start-line="509" selection-end-line="509" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20191210">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="404" column="78" lean-forward="true" selection-start-line="401" selection-start-column="8" selection-end-line="404" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="207" lean-forward="true" selection-start-line="207" selection-end-line="207" />
+        <state relative-caret-position="559">
+          <caret line="457" lean-forward="true" selection-start-line="457" selection-end-line="457" />
           <folding>
             <element signature="e#117#138#0" expanded="true" />
-            <marker date="1544130098843" expanded="true" signature="4412:7887" ph="..." />
           </folding>
         </state>
       </provider>
