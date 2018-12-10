@@ -230,8 +230,10 @@ def draw_snake(x_y, angle):
 
         elif idx > 0 and idx < len(snake_x_y_a) -1:
 
-            if idx%2 == 0:
+            body_part = body_image_02
 
+            '''
+            if idx%2 == 0:
                 if counter%2 == 0 and game_init:
                     body_part = body_image_01
                 else:
@@ -243,7 +245,9 @@ def draw_snake(x_y, angle):
                     body_part = body_image_01
 
             # set counter
-            counter += 3
+            #print(counter)
+            counter += 1
+            '''
 
             if snake_x_y_a[idx - 1][2] == x_y_a[2]:
                 image_rotation = pygame.transform.rotate(body_part, x_y_a[2])
@@ -385,6 +389,7 @@ while game_running:
     # Example 2: check for snake inside display window
     if head_x >= window_width or head_x <= 0 - head_size:
         game_running = False
+
     elif head_y >= window_height or head_y <= 0 - head_size:
         game_running = False
 
@@ -454,12 +459,13 @@ END game_running loop. This is where the logic of game is found with snake move 
 '''
 tidy up game_display
 '''
-print('tidy up game display and quit/credits sequence')
-
-time.sleep(2)# comment this line out to speed up quit
+print('tidy up game display and quit/credits sequence', game_running)
 
 game_display.fill(RED)
 pygame.display.update()
+
+time.sleep(2)# comment this line out to speed up quit
+
 
 # Uninitialise PyGame
 pygame.quit()
